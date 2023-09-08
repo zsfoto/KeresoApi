@@ -1,0 +1,44 @@
+.input-error {
+  border: 2px solid red;
+}
+.form-floating > label {
+  color: rgb(144, 144, 144);
+}
+
+.custom-form .form-control {
+  font-weight: bold;
+}
+
+/* Toast */
+.toast-item-wrapper.success {
+  background-color: #41899B;
+  border: 1px solid #265b68; }
+.toast-item-wrapper.error {
+  background-color: #ff4646;
+  border: 1px solid #ff0000; }
+.toast-item-wrapper.warning {
+  background-color: #fff1c0;
+  border: 1px solid #c5a331;
+  color: #333; }
+.toast-item-wrapper.notice {
+  background-color: #48a9f8;
+  border: 1px solid #208ce4; }
+.toast-item-wrapper.info {
+  background-color: #7f97a3;
+  border: 1px solid #6b8699; }
+
+.toast-item-wrapper.success p.toast-title,
+.toast-item-wrapper.success p.toast-message,
+.toast-item-wrapper.error p.toast-title,
+.toast-item-wrapper.error p.toast-message,
+.toast-item-wrapper.notice p.toast-title,
+.toast-item-wrapper.notice p.toast-message,
+.toast-item-wrapper.info p.toast-title,
+.toast-item-wrapper.info p.toast-message{
+  color: #fff;
+}
+
+.toast-item-wrapper.warning p.toast-title,
+.toast-item-wrapper.warning p.toast-message{
+  color: #534209;
+}
