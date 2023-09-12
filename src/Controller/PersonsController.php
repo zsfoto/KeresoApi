@@ -150,7 +150,9 @@ class PersonsController extends AppController
             'contain' => ['Phones', 'Openings'],
         ]);
 
-        if($person->user_id != $this->request->getAttribute('identity')->id){
+		$role = $this->request->getAttribute('identity')->role;
+
+        if($role != 'admin' && $role != 'superuser' && $person->user_id != $this->request->getAttribute('identity')->id){
             $this->loadModel('MyUsers');
             $user = $this->MyUsers->get($this->request->getAttribute('identity')->id);
             //debug($user); die();
