@@ -218,8 +218,8 @@
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-12"> 
                                                 <div class="form-floating">
-                                                    <?= $this->Form->control('name', ['label' => false, 'placeholder' => __('Name'), 'class' => 'form-control', 'required' => true ]) ?>
-                                                    <label for="floatingInput"><span style="color: red; margin-right: 5px;">*</span><?= __('Name') ?></label>
+                                                    <?= $this->Form->control('name', ['label' => false, 'placeholder' => __('Short name'), 'class' => 'form-control', 'required' => true ]) ?>
+                                                    <label for="floatingInput"><span style="color: red; margin-right: 5px;">*</span><?= __('Short name') ?></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -227,33 +227,52 @@
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-12"> 
                                                 <div class="form-floating">
-                                                    <?= $this->Form->control('description', ['label' => false, 'placeholder' => __('Description'), 'class' => 'form-control', 'required' => true ]) ?>
-                                                    <label for="floatingInput"><span style="color: red; margin-right: 5px;">*</span><?= __('Description') ?></label>
+                                                    <?= $this->Form->control('description', ['label' => false, 'placeholder' => __('Full name'), 'class' => 'form-control', 'required' => true ]) ?>
+                                                    <label for="floatingInput"><span style="color: red; margin-right: 5px;">*</span><?= __('Full name') ?></label>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-12"> 
+                                            <div class="col-lg-3 col-md-3 col-12">
                                                 <div class="form-floating">
-                                                    <?= $this->Form->control('phone', ['type' => 'tel', 'label' => false, 'placeholder' => __('Phone'), 'class' => 'form-control', 'required' => true ]) ?>
+                                                    <?= $this->Form->control('phone', ['type' => 'tel', 'label' => false, 'placeholder' => __('Phone'), 'class' => 'form-control', 'required' => true, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('Phone number')]) ?>
                                                     <label for="floatingInput"><span style="color: red; margin-right: 5px;">*</span><?= __('Phone') ?></label>
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-4 col-md-4 col-12"> 
+                                            <div class="col-lg-1 col-md-1 col-12"> 
                                                 <div class="form-floating">
-                                                    <?= $this->Form->control('phone2', ['type' => 'tel', 'label' => false, 'placeholder' => __('2. Phone'), 'class' => 'form-control', 'required' => false ]) ?>
+                                                    <?= $this->Form->control('ext', ['type' => 'tel', 'label' => false, 'placeholder' => __('Ext'), 'class' => 'form-control', 'required' => false, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('Phone extension number') ]) ?>
+                                                    <label for="floatingInput"><?= __('Ext') ?></label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-3 col-12">
+                                                <div class="form-floating">
+                                                    <?= $this->Form->control('phone2', ['type' => 'tel', 'label' => false, 'placeholder' => __('2. Phone'), 'class' => 'form-control', 'required' => false, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('2. phone number') ]) ?>
                                                     <label for="floatingInput"><?= __('2. Phone') ?></label>
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-4 col-md-4 col-12"> 
+                                            <div class="col-lg-1 col-md-1 col-12"> 
                                                 <div class="form-floating">
-                                                    <?= $this->Form->control('fax', ['type' => 'tel', 'label' => false, 'placeholder' => __('FAX'), 'class' => 'form-control', 'required' => false ]) ?>
+                                                    <?= $this->Form->control('ext2', ['type' => 'tel', 'label' => false, 'placeholder' => __('Ext'), 'class' => 'form-control', 'required' => false, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('2. phone extension number') ]) ?>
+                                                    <label for="floatingInput"><?= __('Ext') ?></label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-3 col-12">
+                                                <div class="form-floating">
+                                                    <?= $this->Form->control('fax', ['type' => 'tel', 'label' => false, 'placeholder' => __('FAX'), 'class' => 'form-control', 'required' => false, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('FAX number') ]) ?>
                                                     <label for="floatingInput"><?= __('FAX') ?></label>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-1 col-md-1 col-12"> 
+                                                <div class="form-floating">
+                                                    <?= $this->Form->control('ext_fax', ['type' => 'tel', 'label' => false, 'placeholder' => __('Ext'), 'class' => 'form-control', 'required' => false, 'data-bs-toggle' => 'tooltip', 'data-bs-placement' => 'top', 'title' => __('FAX extension number') ]) ?>
+                                                    <label for="floatingInput"><?= __('Ext') ?></label>
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                         <div class="row">

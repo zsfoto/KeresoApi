@@ -29,9 +29,14 @@ class PersonsController extends AppController
         $this->paginate = [
             'contain' => ['Categories', 'Cities'],
             // 'Persons.action !=' => 'del',
-            'conditions' => ['Persons.user_id' => $this->request->getSession()->read('Auth.id')],
             'order' => ['Persons.modified' => 'desc']
         ];
+		
+		if($this->request->getAttribute('identity')->role == 'user'){
+			//$this->request->getSession()->read('Auth.id')];
+			$this->paginate['conditions'] = ['Persons.user_id' => $this->request->getAttribute('identity')->role];
+		}
+		
         $persons = $this->paginate($this->Persons);
 
         $this->set(compact('persons'));

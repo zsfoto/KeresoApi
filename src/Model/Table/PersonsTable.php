@@ -108,14 +108,29 @@ class PersonsTable extends Table
             ->allowEmptyString('phone');
 
         $validator
+            ->scalar('ext')
+            ->maxLength('ext', 20)
+            ->allowEmptyString('ext');
+
+        $validator
             ->scalar('phone2')
             ->maxLength('phone2', 30)
             ->allowEmptyString('phone2');
 
         $validator
+            ->scalar('ext2')
+            ->maxLength('ext2', 20)
+            ->allowEmptyString('ext2');
+
+        $validator
             ->scalar('fax')
             ->maxLength('fax', 30)
             ->allowEmptyString('fax');
+
+        $validator
+            ->scalar('ext_fax')
+            ->maxLength('ext_fax', 20)
+            ->allowEmptyString('ext_fax');
 
         $validator
             ->email('email')
