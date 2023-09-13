@@ -100,11 +100,12 @@ class FindersController extends AppController
     $this->loadModel('Openings');
 
     $conditions = ['modified >=' => $param ];
+    $order 		= ['pos' => 'asc', 'name' => 'asc'];
 
-    $categories = $this->Categories->find('all', ['conditions' => $conditions]);
-    $persons = $this->Persons->find('all', ['conditions' => $conditions]);
-    $phones = $this->Phones->find('all', ['conditions' => $conditions]);
-    $openings = $this->Openings->find('all', ['conditions' => $conditions]);
+    $categories = $this->Categories->find('all', ['conditions' => $conditions, 'order' => $order]);
+    $persons = $this->Persons->find('all', ['conditions' => $conditions, 'order' => $order]);
+    $phones = $this->Phones->find('all', ['conditions' => $conditions, 'order' => $order]);
+    $openings = $this->Openings->find('all', ['conditions' => $conditions, 'order' => $order]);
 
     $datas = [
       'categories' => $categories->toArray(),
