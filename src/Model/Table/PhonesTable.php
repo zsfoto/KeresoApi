@@ -44,6 +44,10 @@ class PhonesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('CounterCache', [
+            'Users' => ['phone_count'],
+            'Persons' => ['phone_count'],
+        ]);
 
         $this->belongsTo('MyUsers', [
             'foreignKey' => 'user_id',

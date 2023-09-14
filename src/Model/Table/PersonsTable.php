@@ -49,6 +49,11 @@ class PersonsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('CounterCache', [
+			'Users' => ['person_count'],
+            'Cities' => ['person_count'],
+            'Categories' => ['person_count'],
+        ]);		
 
         $this->belongsTo('Categories', [
             'foreignKey' => 'category_id',

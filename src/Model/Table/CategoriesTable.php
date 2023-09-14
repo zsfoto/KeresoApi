@@ -46,6 +46,10 @@ class CategoriesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('CounterCache', [
+			'Users' => ['category_count'],
+            'Cities' => ['city_count'],
+        ]);		
 
         $this->hasMany('Persons', [
             'foreignKey' => 'category_id',

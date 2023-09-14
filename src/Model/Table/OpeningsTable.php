@@ -44,6 +44,10 @@ class OpeningsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('CounterCache', [
+			'Users' => ['opening_count'],
+            'Persons' => ['opening_count'],
+        ]);		
 
         $this->belongsTo('MyUsers', [
             'foreignKey' => 'user_id',

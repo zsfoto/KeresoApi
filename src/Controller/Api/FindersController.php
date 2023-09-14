@@ -94,6 +94,7 @@ class FindersController extends AppController
   {
 
     $data = [];
+    $this->loadModel('Cities');
     $this->loadModel('Categories');
     $this->loadModel('Persons');
     $this->loadModel('Phones');
@@ -102,12 +103,14 @@ class FindersController extends AppController
     $conditions = ['modified >=' => $param ];
     $order 		= ['pos' => 'asc', 'name' => 'asc'];
 
+    $cities = $this->Cities->find('all', ['conditions' => $conditions, 'order' => ['name' => 'asc']]);
     $categories = $this->Categories->find('all', ['conditions' => $conditions, 'order' => $order]);
     $persons = $this->Persons->find('all', ['conditions' => $conditions, 'order' => $order]);
     $phones = $this->Phones->find('all', ['conditions' => $conditions, 'order' => $order]);
     $openings = $this->Openings->find('all', ['conditions' => $conditions, 'order' => $order]);
 
     $datas = [
+      'cities' => $cities->toArray(),
       'categories' => $categories->toArray(),
       'persons' => $persons->toArray(),
       'phones' => $phones->toArray(),
