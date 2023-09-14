@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02799c9d53a0ee85efbc2659a3eb5fa7",
+    "content-hash": "87ecffb8c6233cc8af31792c50481fc6",
     "packages": [
         {
             "name": "cakedc/auth",
@@ -3211,6 +3211,44 @@
                 }
             ],
             "time": "2023-07-05T08:41:27+00:00"
+        },
+        {
+            "name": "zsfoto/jeffadmin",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zsfoto/jeffadmin.git",
+                "reference": "3ab7b6b9aca9d1f120bae7c4f5a2eba49d65b538"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zsfoto/jeffadmin/zipball/3ab7b6b9aca9d1f120bae7c4f5a2eba49d65b538",
+                "reference": "3ab7b6b9aca9d1f120bae7c4f5a2eba49d65b538",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "^4.4",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.3"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "JeffAdmin\\": "plugins/JeffAdmin/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "JeffAdmin plugin for CakePHP ^4.4",
+            "support": {
+                "issues": "https://github.com/zsfoto/jeffadmin/issues",
+                "source": "https://github.com/zsfoto/jeffadmin/tree/1.1.1"
+            },
+            "time": "2023-09-11T11:31:23+00:00"
         }
     ],
     "packages-dev": [

@@ -100,14 +100,33 @@ class FindersController extends AppController
     $this->loadModel('Phones');
     $this->loadModel('Openings');
 
-    $conditions = ['modified >=' => $param ];
+    //$conditions = ['modified >=' => $param];
     $order 		= ['pos' => 'asc', 'name' => 'asc'];
 
-    $cities = $this->Cities->find('all', ['conditions' => $conditions, 'order' => ['name' => 'asc']]);
-    $categories = $this->Categories->find('all', ['conditions' => $conditions, 'order' => $order]);
-    $persons = $this->Persons->find('all', ['conditions' => $conditions, 'order' => $order]);
-    $phones = $this->Phones->find('all', ['conditions' => $conditions, 'order' => $order]);
-    $openings = $this->Openings->find('all', ['conditions' => $conditions, 'order' => $order]);
+    $cities = $this->Cities->find('all', [
+		'conditions' => ['modified >=' => $param, 'person_count >' => 0],
+		'order' => ['name' => 'asc']
+	]);
+	
+    $categories = $this->Categories->find('all', [
+		'conditions' => ['modified >=' => $param, 'person_count >' => 0],
+		'order' => $order
+	]);
+	
+    $persons = $this->Persons->find('all', [
+		'conditions' => ['modified >=' => $param],
+		'order' => $order
+	]);
+	
+    $phones = $this->Phones->find('all', [
+		'conditions' => ['modified >=' => $param],
+		'order' => $order
+	]);
+	
+    $openings = $this->Openings->find('all', [
+		'conditions' => ['modified >=' => $param],
+		'order' => $order
+	]);
 
     $datas = [
       'cities' => $cities->toArray(),

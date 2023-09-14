@@ -94,7 +94,7 @@ return static function (RouteBuilder $routes) {
         $builder->scope('/', function (RouteBuilder $builder) {
             $builder->setExtensions(['json', 'xml', 'xlsx']);
 
-            $builder->connect('/', ['controller' => 'Finders', 'action' => 'index', 'categories']);
+            $builder->connect('/', ['controller' => 'Categories', 'action' => 'index', 'categories']);
 
             $builder->fallbacks(DashedRoute::class);
         });
@@ -105,7 +105,7 @@ return static function (RouteBuilder $routes) {
         $builder->scope('/', function (RouteBuilder $builder) {
             $builder->setExtensions(['json', 'xml', 'xlsx']);
 
-            $builder->connect('/', ['controller' => 'Finders', 'action' => 'index', 'categories']);
+            $builder->connect('/', ['controller' => 'Finders', 'action' => 'sync']);
             
             $builder->fallbacks(DashedRoute::class);
         });

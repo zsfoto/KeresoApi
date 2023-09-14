@@ -65,10 +65,9 @@ class Application extends BaseApplication
         }
 		
         // Load more plugins here
+		$this->addPlugin('JeffAdmin');
         $this->addPlugin(\CakeDC\Users\Plugin::class);
-        // Uncomment the line below to load your custom users.php config file
-		Configure::write('Users.config', ['users']);
-		
+		Configure::write('Users.config', ['users']);		
 		//$this->getEventManager()->on(new \App\Event\UsersListener());
 		
     }

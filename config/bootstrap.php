@@ -221,3 +221,9 @@ TypeFactory::map('time', StringType::class);
 //Inflector::rules('plural', ['/^(inflect)or$/i' => '\1ables']);
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
+try {
+    Configure::load('jeffadmin', 'default');
+} catch (\Exception $e) {
+    exit($e->getMessage() . "\n");
+}
+Configure::write('Bake.theme', 'JeffAdmin');
