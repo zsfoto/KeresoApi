@@ -45,7 +45,7 @@ class PhonesTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('CounterCache', [
-            'Users' => ['phone_count'],
+            'MyUsers' => ['phone_count'],
             'Persons' => ['phone_count'],
         ]);
 

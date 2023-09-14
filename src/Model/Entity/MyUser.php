@@ -67,6 +67,10 @@ class MyUser extends User
         'additional_data' => true,
         'last_login' => true,
         'social_accounts' => true,
+        'city_count' => true,
+        'person_count' => true,
+        'phone_count' => true,
+        'opening_count' => true,
     ];
 
 

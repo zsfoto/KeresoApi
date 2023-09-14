@@ -44,6 +44,7 @@ class Category extends Entity
         'visible' => true,
         'action' => true,
         'created' => true,
+		'person_count' => true,
         'modified' => true,
         'persons' => true,
     ];

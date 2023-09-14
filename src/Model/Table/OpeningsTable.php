@@ -45,7 +45,7 @@ class OpeningsTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('CounterCache', [
-			'Users' => ['opening_count'],
+			'MyUsers' => ['opening_count'],
             'Persons' => ['opening_count'],
         ]);		
 

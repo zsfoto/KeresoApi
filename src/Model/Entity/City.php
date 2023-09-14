@@ -37,6 +37,7 @@ class City extends Entity
         'longitude' => true,
         'latitude' => true,
         'created' => true,
+        'person_count' => true,
         'modified' => true,
         'persons' => true,
     ];

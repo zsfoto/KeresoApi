@@ -50,21 +50,21 @@ class PersonsTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('CounterCache', [
-			'Users' => ['person_count'],
+			'MyUsers' => ['person_count'],
             'Cities' => ['person_count'],
             'Categories' => ['person_count'],
         ]);		
 
+        $this->belongsTo('MyUsers', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER',
+        ]);
         $this->belongsTo('Categories', [
             'foreignKey' => 'category_id',
             'joinType' => 'INNER',
         ]);
         $this->belongsTo('Cities', [
             'foreignKey' => 'city_id',
-            'joinType' => 'INNER',
-        ]);
-        $this->belongsTo('MyUsers', [
-            'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
         $this->hasMany('Openings', [

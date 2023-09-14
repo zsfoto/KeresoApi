@@ -73,6 +73,8 @@ class Person extends Entity
         'pos' => true,
         'visible' => true,
         'action' => true,
+		'phone_count' => true,
+		'opening_count' => true,
         'created' => true,
         'modified' => true,
         'category' => true,
